@@ -16,7 +16,7 @@
 
         <!-- Dashboards -->
         <li class="sidenav-item active">
-            <a href="index.html" class="sidenav-link hover-link">
+            <a href="<?php echo base_url();?>admin/dashboard" class="sidenav-link hover-link">
                 <i class="sidenav-icon feather icon-home"></i>
                 <div>Home</div>
             </a>
@@ -26,7 +26,7 @@
         
         
         <li class="sidenav-item">
-            <a href="orders.html" class="sidenav-link hover-link">
+            <a href="<?php echo base_url();?>admin/news" class="sidenav-link hover-link">
                 <i class="sidenav-icon feather icon-list"></i>
                 <div>News</div>
             </a>
@@ -34,31 +34,23 @@
 
         <!-- UI elements -->
         <li class="sidenav-item">
-            <a href="javascript:" class="sidenav-link sidenav-toggle hover-link">
+            <a href="<?php echo base_url();?>admin/offers" class="sidenav-link hover-link">
                 <i class="sidenav-icon feather icon-box"></i>
                 <div>Offers</div>
             </a>
-            <!--<ul class="sidenav-menu">
-                <li class="sidenav-item">
-                    <a href="products.html" class="sidenav-link hover-link">
-                        <div>All Products</div>
-                    </a>
-                </li>   
-
-            </ul>-->
         </li>
 
         <!-- Forms & Tables -->
         
         
         <li class="sidenav-item">
-            <a href="homevideo.html" class="sidenav-link hover-link">
+            <a href="<?php echo base_url();?>admin/homePage_video" class="sidenav-link hover-link">
                 <i class="sidenav-icon feather icon-users"></i>
                 <div>Home Page Video</div>
             </a>
         </li>
         <li class="sidenav-item">
-            <a href="watch.html" class="sidenav-link hover-link">
+            <a href="<?php echo base_url();?>admin/watch" class="sidenav-link hover-link">
                 <i class="sidenav-icon feather icon-settings"></i>
                 <div>Watch</div>
             </a>
@@ -66,7 +58,7 @@
 
 
         <li class="sidenav-item">
-            <a href="tables_bootstrap.html" class="sidenav-link hover-link">
+            <a href="<?php echo base_url();?>admin/ecommerce_frontend" class="sidenav-link hover-link">
                 <i class="sidenav-icon feather icon-settings"></i>
                 <div>E-Commerce Front</div>
             </a>
@@ -125,7 +117,7 @@
         <!--  Icons -->
         
         <!-- Pages -->
-        <div class="sidenav-divider mt-0 mb-0"></div>
+        <!-- <div class="sidenav-divider mt-0 mb-0"></div>
         <li class="sidenav-header small font-weight-semibold">Account Links</li>
         <div class="sidenav-divider mt-0"></div>
         <li class="sidenav-item">
@@ -145,6 +137,6 @@
                 <i class="sidenav-icon feather icon-anchor"></i>
                 <div>FAQ</div>
             </a>
-        </li>
+        </li> -->
     </ul>
 </div>

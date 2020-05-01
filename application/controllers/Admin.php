@@ -32,6 +32,57 @@ class Admin extends CI_Controller {
         $this->load->view('backend/index', $page_data);
     }
 
+    function news($param1 = "", $param2 = "")
+    {   
+        if ($param1 == 'create') {
+          $result = $this->crud_model->create_news();
+          if(isset($result)){
+            redirect(base_url('admin/news'), 'refresh');   
+          }else {
+            redirect(base_url('admin/dashboard'), 'refresh');
+          }
+        }
+
+        if ($param1 == 'edit') {
+            
+        }
+
+        if ($param1 == 'delete') {
+            
+        }
+        $page_data['news'] = $this->crud_model->get_news();
+        $page_data['page_name']  = 'news';
+        $page_data['page_title'] = 'Admin dashboard';
+        $this->load->view('backend/index', $page_data); 
+    }
+
+
+    function ecommerce_frontend(){
+        $page_data['page_name']  = 'ecommerce_frontend';
+        $page_data['page_title'] = 'Admin dashboard';
+        $this->load->view('backend/index', $page_data);
+    }
+
+    function offers(){
+        $page_data['page_name']  = 'offers';
+        $page_data['page_title'] = 'Admin dashboard';
+        $this->load->view('backend/index', $page_data);
+    }
+    function homePage_video()
+    {
+        $page_data['page_name']  = 'homepage_video';
+        $page_data['page_title'] = 'Admin dashboard';
+        $this->load->view('backend/index', $page_data);
+    }
+
+    function watch()
+    {
+        $page_data['page_name']  = 'watch';
+        $page_data['page_title'] = 'Admin dashboard';
+        $this->load->view('backend/index', $page_data);
+    }
+
+
 
     
     

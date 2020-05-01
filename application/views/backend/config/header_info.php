@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap-material.css">
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/shreerang-material.css">
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/uikit.css">
+<link rel="stylesheet" href="<?php echo base_url();?>assets/css/custom.css">
 
 <!-- Libs -->
 <link rel="stylesheet" href="<?php echo base_url();?>assets/libs/perfect-scrollbar/perfect-scrollbar.css">
@@ -22,3 +23,5 @@
 <link rel="stylesheet" href="<?php echo base_url();?>assets/libs/Mdbootstrap/css/mdb.lite.min.css">
 <link rel="stylesheet" href="<?php echo base_url();?>assets/libs/Mdbootstrap/css/mdb.min.css">
 <link rel="stylesheet" href="<?php echo base_url();?>assets/libs/Mdbootstrap/css/mdb-lite.free.css">
+
+<!--bootstrap-->

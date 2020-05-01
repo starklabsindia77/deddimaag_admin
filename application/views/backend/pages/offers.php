@@ -1,0 +1,162 @@
+<div class="container-fluid flex-grow-1 container-p-y">
+    <h4 class="font-weight-bold py-3 mb-0">Dashboard</h4>
+    <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a></li>
+            <li class="breadcrumb-item"><a href="#">Library</a></li>
+            <li class="breadcrumb-item active">Watch</li>
+        </ol>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="card mb-4">
+                        <div class="card-header bg-002B6 text-white p-3">
+                            <h6 class="card-title mb-1 font-weight-bold">Watch</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="my-4 d-flex justify-content-center text-center"></div>  
+                            <div class="tab-content m-7rem">
+                                <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                                    <div class="tab_01 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <img src="<?php echo base_url();?>assets/img/mobileFashions/upload.png" style="border: 2px dotted #b6b0b0;">
+                                                </div>
+
+                                                <div class="col-md-9 pt-x">
+                                                    <div class="row  ml-1">
+                                                        <h4 class="text-lead">Banner Title</h4>
+                                                    </div>
+                                                    
+
+
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab_01  mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <img src="<?php echo base_url();?>assets/img/mobileFashions/fashio1.png" style="border: 2px dotted #b6b0b0;">
+                                                </div>
+
+                                                <div class="col-md-9 pt-x">
+                                                    <div class="row  ml-1">
+                                                        <div class="input-group mb-3">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text">Title:</span>
+                                                            </div>
+                                                            <input type="text" class="form-control">
+                                                            <div class="input-group-append">
+                                                                <span class="input-group-text"><i class="fa fa-edit"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        
+                                                        <div class="flex-fill col-xs-12">
+                                                            
+                                                            <button type="button" class="p-xx1">Add Image</button>
+                                                        </div>
+
+                                                        <div class="flex-fill col-xs-12">
+                                                            
+                                                            <button type="button" class="p-xx1">off</button>
+                                                        </div>
+
+
+                                                        <div class="flex-fill col-xs-12">
+                                                            
+                                                            <button type="button" class="p-xx1">Delete</button>
+                                                        </div>
+
+                                                        <div class="flex-fill col-xs-12">
+                                                            
+                                                            <input type="text" class="form-control" placeholder="Search blog posts...">
+                                                        </div>
+                                                    </div>
+
+
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                    
+                                    <div class="tab_01  mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <img src="<?php echo base_url();?>assets/img/mobileFashions/fashio2.png" style="border: 2px dotted #b6b0b0;">
+                                                </div>
+
+                                                <div class="col-md-9 pt-x">
+                                                    <div class="row  ml-1">
+                                                        <div class="input-group mb-3">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text">Title:</span>
+                                                            </div>
+                                                            <input type="text" class="form-control">
+                                                            <div class="input-group-append">
+                                                                <span class="input-group-text"><i class="fa fa-edit"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        
+                                                        <div class="flex-fill col-xs-12">
+                                                            
+                                                            <button type="button" class="p-xx1">Add Image</button>
+                                                        </div>
+
+                                                        <div class="flex-fill col-xs-12">
+                                                            
+                                                            <button type="button" class="p-xx1">off</button>
+                                                        </div>
+
+
+                                                        <div class="flex-fill col-xs-12">
+                                                            
+                                                            <button type="button" class="p-xx1">Delete</button>
+                                                        </div>
+
+                                                        <div class="flex-fill col-xs-12">
+                                                            
+                                                            <input type="text" class="form-control" placeholder="Search blog posts...">
+                                                        </div>
+                                                    </div>
+
+
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                            
+                                    
+                                </div>                                                                  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <img src="<?php echo base_url();?>assets/img/mobileFashions/03.png">
+                </div>   
+            </div>
+        </div>     
+    </div>
+</div>
