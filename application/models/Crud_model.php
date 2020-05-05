@@ -150,6 +150,24 @@ class Crud_model extends CI_Model {
 
     }
 
+    function delete_news($id){
+      $crsf = $this->session->userdata('cookie');
+      $session = $this->session->userdata('cookie_2');
+      $url = "http://18.191.31.131:8000/api/news/?id=$id";
+      $ch = curl_init();
+          curl_setopt($ch, CURLOPT_URL, $url);
+          curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', "Cookie: csrftoken= $crsf; sessionid=$session"));
+          curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+          curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE" );
+          curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+          curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+          curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+      $result = curl_exec($ch);
+      $response = json_decode($result);     
+      return $response;
+
+    }
+
     //news model end//
 
     function get_quote_id($id){

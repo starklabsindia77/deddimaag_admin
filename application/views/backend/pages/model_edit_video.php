@@ -5,25 +5,25 @@
 <form id="data" method="PUT" enctype="multipart/form-data">   
     <div class="row">
         <div class="col-md-6 form-group mb-3">
-            <label for="Heading">Title</label>
-            <input class="form-control" id="Heading" name="VideoTitle" type="text" value="<?php echo $video->VideoTitle;?>" />
+            <label for="VideoTitle">Title</label>
+            <input class="form-control" id="VideoTitle" name="VideoTitle" type="text" value="<?php echo $video->VideoTitle;?>" />
         </div>
         <div class="col-md-6 form-group mb-3">
-            <label for="Heading_2">CollectionType</label>
-            <select id="Heading_2" name="CollectionType" class="form-control">
-                    <option value="<?php echo $video->CollectionType;?>"><?php echo $video->CollectionType;?></option>
+            <label for="CollectionType">CollectionType</label>
+            <select id="CollectionType" name="CollectionType" class="form-control">
+                    <option value="">Select</option>
                     <?php 
                     $State = $this->crud_model->get_video_collection();
                     foreach($State as $row):
                     ?>
-                    <option value="<?php echo  $row->CollectionType;?>">
+                    <option value="<?php echo  $row->id;?>">
                     <?php echo  $row->CollectionType;?></option>
                     <?php endforeach;?>
             </select>
         </div>
         <div class="col-md-12 form-group mb-3">
-            <label for="Heading_3">Youtube Link</label>
-            <input class="form-control" id="Heading_3" name="YoutubeURL" type="text" value="<?php echo $video->YoutubeURL;?>" />
+            <label for="YoutubeURL">Youtube Link</label>
+            <input class="form-control" id="YoutubeURL" name="YoutubeURL" type="text" value="<?php echo $video->YoutubeURL;?>" />
         </div>
         <div class="col-md-12 form-group mb-3">
             <div class="upload-btn-wrapper">
@@ -48,17 +48,14 @@
         var form = $('#data')[0];
         // Create an FormData object
         var data = new FormData(form);
-        var crsftoken = "csrftoken="+"<?php echo $this->session->userdata('cookie');?>";
-        var sessionId = "sessionid="+"<?php echo $this->session->userdata('cookie_2');?>";
         // console.log(crsftoken+";"+sessionId);
         $.ajax({
             url:url,
-            type:"put",
+            type:method,
             enctype: 'multipart/form-data',
             processData: false,  // Important!
             contentType: false,
             cache: false,
-            headers: {"Cookie" : sessionId+"; "+crsftoken},
             data:data
         }).done(function(data){
            if(data !== '')

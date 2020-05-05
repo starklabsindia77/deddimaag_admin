@@ -1,12 +1,12 @@
 <?php $info = $this->crud_model->get_news_id($param2);
 ?> 
 
-<form   id="data" method="POST" enctype="multipart/form-data">
+<form   id="data" method="PUT" enctype="multipart/form-data">
    
     <div class="row">
         <div class="col-md-12 form-group mb-3">
-            <label for="Heading">Heading</label>
-            <input class="form-control" id="Heading" name="Title" type="text" value="<?php echo $info[0]->Title;?>" />
+            <label for="Title">Heading</label>
+            <input type="text" class="form-control" id="Title" name="Title" value="<?php echo $info[0]->Title;?>" />
         </div>
         <div class="col-md-6 form-group mb-3">
             <label for="SubHeading">Sub Heading</label>
@@ -52,8 +52,8 @@
     $("form#data").submit(function(e) {
         e.preventDefault();    
         //var formData = new FormData(this);
-        var url = "http://18.191.31.131:8000/api/news/?id=13";
-        var method = "PUT";
+        var url = "http://18.191.31.131:8000/api/news/?id=<?php echo $info[0]->id;?>";
+        var method = $(this).attr('method');
         //var data = $(this).serialize();
         console.log(data);
         var form = $('#data')[0];

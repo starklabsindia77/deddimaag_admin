@@ -49,3 +49,11 @@
   background-color: #fff; }
   select.form-control[size], select.form-control[multiple] {
   height: auto; }
+
+  
+  .FSZ{
+    font-size: 20px;
+  }
+  .color-white{
+    color: #ffffff;
+  }

@@ -20,9 +20,9 @@
                         <div class="card-body">
                             <div class="row p-5">
                                 <div class="buttons mx-auto">
-                                    <button type="button" class="p-xx btn-block adju">Section One</button>
-                                    <button type="button" class="p-xx btn-block adju">Section One</button>
-                                    <button type="button" class="p-xx btn-block adju">Section One</button>
+                                    <button type="button" class="p-xx btn-block adju "><a href="<?php echo base_url();?>admin/sectionOne" class="color-white FSZ">Section One</a></button>
+                                    <button type="button" class="p-xx btn-block adju"><a href="<?php echo base_url();?>admin/sectionTwo" class="color-white FSZ">Section Two</a></button>
+                                    <button type="button" class="p-xx btn-block adju"><a href="<?php echo base_url();?>admin/sectionThree" class="color-white FSZ">Section Three</a></button>
                                 </div>
                             </div>
                         </div>

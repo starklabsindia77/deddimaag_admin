@@ -1,25 +1,25 @@
 <form id="data" method="POST" enctype="multipart/form-data">   
     <div class="row">
         <div class="col-md-6 form-group mb-3">
-            <label for="Heading">Title</label>
-            <input class="form-control" id="Heading" name="VideoTitle" type="text" />
+            <label for="VideoTitle">Title</label>
+            <input class="form-control" id="VideoTitle" name="VideoTitle" type="text" />
         </div>
         <div class="col-md-6 form-group mb-3">
-            <label for="Heading_2">CollectionType</label>
-            <select id="Heading_2" name="CollectionType" class="form-control">
+            <label for="CollectionType">CollectionType</label>
+            <select id="CollectionType" name="CollectionType" class="form-control">
                     <option value="">Select</option>
                     <?php 
                     $State = $this->crud_model->get_video_collection();
                     foreach($State as $row):
                     ?>
-                    <option value="<?php echo  $row->CollectionType;?>">
+                    <option value="<?php echo  $row->id;?>">
                     <?php echo  $row->CollectionType;?></option>
                     <?php endforeach;?>
             </select>
         </div>
         <div class="col-md-12 form-group mb-3">
-            <label for="Heading_3">Youtube Link</label>
-            <input class="form-control" id="Heading_3" name="YoutubeURL" type="text" />
+            <label for="YoutubeURL">Youtube Link</label>
+            <input class="form-control" id="YoutubeURL" name="YoutubeURL" type="text" />
         </div>
         <div class="col-md-12 form-group mb-3">
             <div class="upload-btn-wrapper">

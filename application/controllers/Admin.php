@@ -35,21 +35,15 @@ class Admin extends CI_Controller {
     {   
         /*if ($this->session->userdata('user_login') != 1)
             redirect(base_url('admin/dashboard'), 'refresh');*/
-        /*if ($param1 == 'create') {
-          $result = $this->crud_model->create_news();
-          if(isset($result)){
-            redirect(base_url('admin/news'), 'refresh');   
-          }else {
-            redirect(base_url('admin/dashboard'), 'refresh');
-          }
-        }*/
-
-        if ($param1 == 'edit') {
-            
-        }
+        
 
         if ($param1 == 'delete') {
-            
+             $response = $this->crud_model->delete_news($param2);
+            if(empty($response)){
+                redirect(base_url('admin/offers'), 'refresh');
+            }else{
+                redirect(base_url('admin/dashboard'), 'refresh');
+            }
         }
         $page_data['news'] = $this->crud_model->get_news();
         $page_data['page_name']  = 'news';
@@ -115,6 +109,33 @@ class Admin extends CI_Controller {
         $page_data['page_name']  = 'watch';
         $page_data['page_title'] = 'Admin dashboard';
         $this->load->view('backend/index', $page_data);
+    }
+
+    function sectionOne()
+    {
+        if ($this->session->userdata('user_login') != 1)
+            redirect(base_url(), 'refresh');
+        $page_data['page_name']  = 'section_one';
+        $page_data['page_title'] = 'Admin dashboard';
+        $this->load->view('backend/index', $page_data);   
+    }
+
+    function sectionTwo()
+    {
+        if ($this->session->userdata('user_login') != 1)
+            redirect(base_url(), 'refresh');
+        $page_data['page_name']  = 'section_two';
+        $page_data['page_title'] = 'Admin dashboard';
+        $this->load->view('backend/index', $page_data);   
+    }
+
+    function sectionThree()
+    {
+        if ($this->session->userdata('user_login') != 1)
+            redirect(base_url(), 'refresh');
+        $page_data['page_name']  = 'section_three';
+        $page_data['page_title'] = 'Admin dashboard';
+        $this->load->view('backend/index', $page_data);   
     }
 
 

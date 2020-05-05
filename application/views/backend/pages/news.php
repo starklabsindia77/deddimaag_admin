@@ -114,7 +114,7 @@
                                                         <td><?php echo $key->PostedDate;?></td>
                                                         <td>
                                                             <button class="btn btn-outline-primary m-1" type="button"><a onclick="showAjaxModal('<?php echo base_url('modal/popup/model_edit_news/'.$key->id);?>')">Edit</a></button>
-                                                            <button class="btn btn-outline-primary m-1" type="button"><a onclick="confirm_modal('<?php echo base_url('admin/delete_state/'.$key->id);?>');">Delete</a></button>
+                                                            <button class="btn btn-outline-primary m-1" type="button"><a onclick="confirm_modal('<?php echo base_url('admin/news/delete/'.$key->id);?>');">Delete</a></button>
                                                         </td>                       
                                                     </tr>
                                                     <?php endforeach;?>
