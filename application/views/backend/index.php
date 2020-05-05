@@ -53,7 +53,7 @@
         <div class="layout-overlay layout-sidenav-toggle"></div>
     </div>
     <!-- [ Layout wrapper] End -->
-
+    <?php include 'config/models.php';?>
     <?php include 'config/bottom_info.php';?>
 </body>
 

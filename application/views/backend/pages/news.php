@@ -73,98 +73,52 @@
                                                 <!--Table head-->
                                                 <thead>
                                                     <tr>
-                                                    <th>
-                                                        <input class="form-check-input" type="checkbox" id="checkbox">
-                                                        <label class="form-check-label" for="checkbox" class="mr-2 label-table"></label>
-                                                    </th>
-                                                    
-                                                    <th class="th-lg" style="width:200px !important;">
-                                                        <a href="">Title
-                                                        <i class="fas fa-sort ml-1"></i>
-                                                        </a>
-                                                    </th>
-                                                    <th class="th-lg">
-                                                        <a href="">Blog
-                                                        <i class="fas fa-sort ml-1"></i>
-                                                        </a>
-                                                    </th>
-                                                    <th class="th-lg" style="width:200px !important;">
-                                                        <a href="">Author
-                                                        <i class="fas fa-sort ml-1"></i>
-                                                        </a>
-                                                    </th>
-                                                    <th class="th-lg">
-                                                        <a href="">Date
-                                                        <i class="fas fa-sort ml-1"></i>
-                                                        </a>
-                                                    </th>
-                                                    
+                                                                                                             
+                                                        <th class="th-lg" style="width:200px !important;">
+                                                            <a href="">Title
+                                                            <i class="fas fa-sort ml-1"></i>
+                                                            </a>
+                                                        </th>
+                                                        <th class="th-lg">
+                                                            <a href="">Blog
+                                                            <i class="fas fa-sort ml-1"></i>
+                                                            </a>
+                                                        </th>
+                                                        <!-- <th class="th-lg" style="width:200px !important;">
+                                                            <a href="">Author
+                                                            <i class="fas fa-sort ml-1"></i>
+                                                            </a>
+                                                        </th> -->
+                                                        <th class="th-lg">
+                                                            <a href="">Date
+                                                                <i class="fas fa-sort ml-1"></i>
+                                                            </a>
+                                                        </th> 
+                                                        <th class="th-lg">
+                                                            <a href="">Action
+                                                                <i class="fas fa-sort ml-1"></i>
+                                                            </a>
+                                                        </th>                                                   
                                                     </tr>
                                                 </thead>
                                                 <!--Table head-->
                                         
                                                 <!--Table body-->
                                                 <tbody>
+                                                    <?php foreach ($news as $key ):?>
                                                     <tr>
-                                                    <th scope="row">
-                                                        <input class="form-check-input" type="checkbox" id="checkbox1">
-                                                        <label class="form-check-label" for="checkbox1" class="label-table"></label>
-                                                    </th>
-                                                    
-                                                    <td><img src="<?php echo base_url();?>assets/img/mobileFashions/product.png" class="mr-2"><span><a href="#" class="mr-2" style="color:#147ee1">environment</a></span><span class="badge badge-default"> hidden</span></td>
-                                                    <td>News</td>
-                                                    <td>Word fashions</td>
-                                                    <td>02-03-2020</td>
-                                                    
+                                                                                                          
+                                                        <td><img src="http://18.191.31.131:8000/api<?php echo $key->Image;?>" class="mr-2" style="width: 40px; height: 40px;"><span><a href="#" class="mr-2" style="color:#147ee1"><?php echo $key->Title;?></a></span></td>
+                                                        <td>News</td>
+                                                        <!-- <td><?php echo $key->ContributedBy;?></td> -->
+                                                        <td><?php echo $key->PostedDate;?></td>
+                                                        <td>
+                                                            <button class="btn btn-outline-primary m-1" type="button"><a onclick="showAjaxModal('<?php echo base_url('modal/popup/model_edit_news/'.$key->id);?>')">Edit</a></button>
+                                                            <button class="btn btn-outline-primary m-1" type="button"><a onclick="confirm_modal('<?php echo base_url('admin/delete_state/'.$key->id);?>');">Delete</a></button>
+                                                        </td>                       
                                                     </tr>
-                                                    <tr>
-                                                    <th scope="row">
-                                                        <input class="form-check-input" type="checkbox" id="checkbox2">
-                                                        <label class="form-check-label" for="checkbox2" class="label-table"></label>
-                                                    </th>
-                                                    
-                                                    <td><img src="<?php echo base_url();?>assets/img/mobileFashions/product.png" class="mr-2"><span><a href="#" class="mr-2" style="color:#147ee1">environment</a></span><span class="badge badge-default"> hidden</span></td>
-                                                    <td>News</td>
-                                                    <td>Venky brands</td>
-                                                    <td>02-03-2020</td>
-                                                    
-                                                    </tr>
-                                                    <tr>
-                                                    <th scope="row">
-                                                        <input class="form-check-input" type="checkbox" id="checkbox3">
-                                                        <label class="form-check-label" for="checkbox3" class="label-table"></label>
-                                                    </th>
-                                                    
-                                                    <td><img src="<?php echo base_url();?>assets/img/mobileFashions/product.png" class="mr-2"><span><a href="#" class="mr-2" style="color:#147ee1">environment</a></span><span class="badge badge-default"> hidden</span></td>
-                                                    <td>News</td>
-                                                    <td>Manasa flowers</td>
-                                                    <td>03-03-2020</td>
-                                                    
-                                                    </tr>
-                                                    <tr>
-                                                    <th scope="row">
-                                                        <input class="form-check-input" type="checkbox" id="checkbox4">
-                                                        <label class="form-check-label" for="checkbox4" class="label-table"></label>
-                                                    </th>
-                                                    
-                                                    <td><img src="<?php echo base_url();?>assets/img/mobileFashions/product.png" class="mr-2"><span><a href="#" class="mr-2" style="color:#147ee1">environment</a></span><span class="badge badge-default"> hidden</span></td>
-                                                    <td>News</td>
-                                                    <td>Priay Brands</td>
-                                                    <td>05-03-2020</td>
-                                                    
-                                                    </tr>
-                                                    <tr>
-                                                    <th scope="row">
-                                                        <input class="form-check-input" type="checkbox" id="checkbox5">
-                                                        <label class="form-check-label" for="checkbox5" class="label-table"></label>
-                                                    </th>
-                                                    
-                                                    <td><img src="<?php echo base_url();?>assets/img/mobileFashions/product.png" class="mr-2"><span><a href="#" class="mr-2" style="color:#147ee1">environment</a></span><span class="badge badge-default"> hidden</span></td>
-                                                    <td>News</td>
-                                                    <td>Nandaka Impressions</td>
-                                                    <td>07-03-2020</td>
-                                                    
-                                                    </tr>
+                                                    <?php endforeach;?>
+                                                   
                                                 </tbody>
                                                 <!--Table body-->
                                                 </table>
@@ -178,15 +132,15 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                    <form action="<?php echo base_url();?>admin/news/create" method="POST" enctype="multipart/form-data">
+                                    <form action="http://18.191.31.131:8000/api/news/" id="data" method="POST" enctype="multipart/form-data">
                                         <div class="row">
                                             <div class="col-md-12 form-group mb-3">
                                                 <label for="Heading">Heading</label>
-                                                <input class="form-control" id="Heading" name="Heading" type="text" />
+                                                <input class="form-control" id="Heading" name="Title" type="text" />
                                             </div>
                                             <div class="col-md-6 form-group mb-3">
                                                 <label for="SubHeading">Sub Heading</label>
-                                                <input class="form-control" id="SubHeading" name="SubHeading" type="text" />
+                                                <input class="form-control" id="SubHeading" name="SubTitle" type="text" />
                                             </div>
                                             <div class="col-md-6 form-group mb-3">
                                                 <label for="ContributedBy">Contributed By</label>
@@ -194,34 +148,69 @@
                                             </div>
                                             <div class="col-md-4 form-group mb-3">
                                                 <label for="InstaID">Insta ID</label>
-                                                <input class="form-control" type="text" id="InstaID"  name="InstaID" />
+                                                <input class="form-control" type="text" id="InstaID"  name="InstagramId" />
                                             </div>
                                             <div class="col-md-4 form-group mb-3">
                                                 <label for="FacebookID">Facebook ID</label>
-                                                <input class="form-control" type="text" id="FacebookID" name="FacebookID" />
+                                                <input class="form-control" type="text" id="FacebookID" name="FaceBookId" />
                                             </div>
                                             <div class="col-md-4 form-group mb-3">
                                                 <label for="TwitterID">Twitter ID</label>
-                                                <input class="form-control" id="TwitterID" type="text" name="TwitterID" />
+                                                <input class="form-control" id="TwitterID" type="text" name="TwitterId" />
                                             </div>
                                             <div class="col-md-12 form-group mb-3">
-                                                <label for="code_preview0">Content</label>
-                                                <textarea class="form-control" id="code_preview0" name="content" style="height: 300px;"></textarea>
+                                                <label for="Content">Content</label>
+                                                <textarea class="form-control" id="Content" name="Content" style="height: 300px;"></textarea>
                                             </div>
                                             <div class="col-md-6 form-group mb-3">
                                                 <div class="upload-btn-wrapper">
                                                     <button class="btn">Upload a Media</button>
-                                                    <input type="file" class="" name="logo" id="imgInp" />
+                                                    <input type="file" class="" name="Image" id="Image" />
                                                 </div>
                                             </div>                                       
                                             
                                             <div class="col-md-6 form-group mb-3">
                                                 <div class="float-sm-right text-zero">
-                                                    <button class="btn btn-primary">Submit</button>
+                                                    <button type="submit" class="btn btn-primary">Submit</button>
                                                 </div>
                                             </div> 
                                         </div>
                                     </form>
+                                    <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+                                    <script type="text/javascript">
+                                        $("form#data").submit(function(e) {
+                                            e.preventDefault();    
+                                            //var formData = new FormData(this);
+                                            var url = $(this).attr('action');
+                                            var method = $(this).attr('method');
+                                            //var data = $(this).serialize();
+                                            console.log(data);
+                                            var form = $('#data')[0];
+
+                                            // Create an FormData object
+                                            var data = new FormData(form);
+                                            $.ajax({
+                                                url:url,
+                                                type:method,
+                                                enctype: 'multipart/form-data',
+                                                processData: false,  // Important!
+                                                contentType: false,
+                                                cache: false,
+                                                data:data
+                                            }).done(function(data){
+                                               if(data !== '')
+                                                {
+                                                   window.location.href='<?php echo base_url() ?>admin/news';
+                                                }
+                                                else
+                                                {
+                                                   window.location.href='<?php echo base_url() ?>admin/dashboard';
+                                                   throw new Error('go');
+                                                } 
+                                            });
+                                        });
+                                    </script>  
+                                    
                                 </div>
                                 <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
                                     <div class="droping">
@@ -385,6 +374,6 @@
 <!-- custom scripts-->
 <script type="text/javascript">
   $(document).ready(function() {
-    $('#code_preview0').summernote({height: 300});
+    $('#Content').summernote({height: 300});
     });
 </script>

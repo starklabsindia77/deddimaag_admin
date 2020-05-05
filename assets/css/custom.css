@@ -1,4 +1,4 @@
-.upload-btn-wrapper {
+  .upload-btn-wrapper {
     position: relative;
     overflow: hidden;
     display: inline-block;
@@ -43,4 +43,9 @@
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
+   }
+   select.form-control:focus::-ms-value {
+  color: #665c70;
+  background-color: #fff; }
+  select.form-control[size], select.form-control[multiple] {
+  height: auto; }

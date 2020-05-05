@@ -56,11 +56,11 @@
             </div>
             <!-- [ Logo ] End -->
 
-            <!-- [ Form ] Start -->
-            <form class="my-5" action="<?php echo base_url();?>auth/login" method="POST" enctype="multipart/form-data">
+            <!-- [ Form ] Start  <?php echo base_url();?>auth/login -->
+            <form class="my-5" action="<?php echo base_url();?>auth/login" id="data" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="form-label">Email</label>
-                    <input type="text" class="form-control" name="email">
+                    <input type="text" class="form-control" name="emailORphnno">
                     <div class="clearfix"></div>
                 </div>
                 <div class="form-group">
@@ -92,7 +92,41 @@
 
     <!-- Core scripts -->
     <script src="<?php echo base_url();?>assets/js/pace.js"></script>
-    <script src="<?php echo base_url();?>assets/js/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+   <!--  <script type="text/javascript">
+        $("form#data").submit(function(e){
+            e.preventDefault();    
+            //var formData = new FormData(this);
+            var url = $(this).attr('action');
+            var method = $(this).attr('method');
+            //var data = $(this).serialize();
+            console.log(data);
+            var form = $('#data')[0];
+
+            // Create an FormData object
+            var data = new FormData(form);
+            $.ajax({
+                url:url,
+                type:method,
+                enctype: 'multipart/form-data',
+                processData: false,  // Important!
+                contentType: false,
+                cache: false,
+                data:data
+            }).done(function(data){
+               if(data !== '')
+                {
+                    //console.log(data);
+                    window.location.href='<?php echo base_url();?>admin/dashboard';
+                }
+                else
+                {
+                window.location.href='<?php echo base_url();?>';
+                throw new Error('go');
+                } 
+            });
+        });
+    </script>  -->
     <script src="<?php echo base_url();?>assets/libs/popper/popper.js"></script>
     <script src="<?php echo base_url();?>assets/js/bootstrap.js"></script>
     <script src="<?php echo base_url();?>assets/js/sidenav.js"></script>

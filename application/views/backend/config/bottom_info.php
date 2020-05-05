@@ -1,7 +1,7 @@
 <!-- Core scripts -->
     <script src="<?php echo base_url();?>assets/js/pace.js"></script>
-    <script src="<?php echo base_url();?>assets/js/jquery-3.3.1.min.js"></script>
-    <script src="<?php echo base_url();?>assets/libs/popper/popper.js"></script>
+    <!-- <script src="<?php echo base_url();?>assets/js/jquery-3.3.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
     <script src="<?php echo base_url();?>assets/js/bootstrap.js"></script>
     <script src="<?php echo base_url();?>assets/js/sidenav.js"></script>
     <script src="<?php echo base_url();?>assets/js/layout-helpers.js"></script>

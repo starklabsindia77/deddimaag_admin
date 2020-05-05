@@ -1,3 +1,6 @@
+
+
+
 <!-- [ content ] Start -->
 <div class="container-fluid flex-grow-1 container-p-y">
     <h4 class="font-weight-bold py-3 mb-0">Dashboard</h4>
@@ -17,66 +20,100 @@
                             <h6 class="card-title mb-1 font-weight-bold">Quotes</h6>
                         </div>
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6 mb-2">
-                                    <button type="button" class="btn btn-block p-xx" style="padding:1rem 2rem !important;">Quote One</button>
+                            <form action="http://18.191.31.131:8000/api/homepage_quotes/?id=1" id="data" method="POST" enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="Heading">Quote One</label>
+                                        <input class="form-control" id="Heading" name="Quote1" type="text" value="<?php echo $quote[0];?>" />
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="SubHeading">Quote Two</label>
+                                        <input class="form-control" id="SubHeading" name="Quote2" type="text" value="<?php echo $quote[1];?>" />
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="ContributedBy">Quote Three</label>
+                                        <input class="form-control" id="ContributedBy" name="Quote3" type="text" value="<?php echo $quote[2];?>"/>
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="InstaID">Quote Four</label>
+                                        <input class="form-control" type="text" id="InstaID"  name="Quote4" value="<?php echo $quote[3];?>" />
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="FacebookID">Quote Five</label>
+                                        <input class="form-control" type="text" id="FacebookID" name="Quote5" value="<?php echo $quote[4];?>"/>
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="TwitterID">Quote Six</label>
+                                        <input class="form-control" id="TwitterID" type="text" name="Quote6" value="<?php echo $quote[5];?>"/>
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="Content">Quote Seven</label>
+                                        <input class="form-control" id="Content" name="Quote7" type="text" value="<?php echo $quote[6];?>"/>
+                                    </div>
+                                     <div class="col-md-6 form-group mb-3">
+                                        <label for="FacebookID">Quote Eight</label>
+                                        <input class="form-control" type="text" id="FacebookID" name="Quote8" value="<?php echo $quote[7];?>"/>
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="TwitterID">Quote Nine</label>
+                                        <input class="form-control" id="TwitterID" type="text" name="Quote9" value="<?php echo $quote[8];?>"/>
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="Content">Quote Ten</label>
+                                        <input class="form-control" type="text" id="Content" name="Quote10" value="<?php echo $quote[9];?>"/>
+                                    </div>                                       
+                                    
+                                    <div class="col-md-12 form-group mb-3">
+                                        <div class="float-sm-right text-zero">
+                                            <button type="submit" class="btn btn-primary">Update</button>
+                                        </div>
+                                    </div> 
                                 </div>
-
-                                <div class="col-md-6 mb-2">
-                                    <button type="button" class="btn btn-block p-xx" style="padding:1rem 2rem !important;">Quote One</button>
-                                </div>
-
-                                <div class="col-md-6 mb-2">
-                                    <button type="button" class="btn btn-block p-xx" style="padding:1rem 2rem !important;">Quote One</button>
-                                </div>
-
-                                <div class="col-md-6 mb-2">
-                                    <button type="button" class="btn btn-block p-xx" style="padding:1rem 2rem !important;">Quote One</button>
-                                </div>
-
-                                <div class="col-md-6 mb-2">
-                                    <button type="button" class="btn btn-block p-xx" style="padding:1rem 2rem !important;">Quote One</button>
-                                </div>
-
-                                <div class="col-md-6 mb-2">
-                                    <button type="button" class="btn btn-block p-xx" style="padding:1rem 2rem !important;">Quote One</button>
-                                </div>
-
-                                <div class="col-md-6 mb-2">
-                                    <button type="button" class="btn btn-block p-xx" style="padding:1rem 2rem !important;">Quote One</button>
-                                </div>
-
-                                <div class="col-md-6 mb-2">
-                                    <button type="button" class="btn btn-block p-xx" style="padding:1rem 2rem !important;">Quote One</button>
-                                </div>
-
-                                <div class="col-md-6 mb-2">
-                                    <button type="button" class="btn btn-block p-xx" style="padding:1rem 2rem !important;">Quote One</button>
-                                </div>
-
-                                <div class="col-md-6 mb-2">
-                                    <button type="button" class="btn btn-block p-xx" style="padding:1rem 2rem !important;">Quote One</button>
-                                </div>
-                                
-                            </div>
-
-
-                            <div class="my-2 w-100 d-flex justify-content-center text-center">
-                                <button type="button" class="btn p-xx w-25" style="padding:0.7rem !important;border-radius:10px;">Update</button>
-                                <button type="button" class="btn p-xx w-25" style="padding:0.7rem !important;border-radius:10px;">Live</button>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <img src="<?php echo base_url();?>assets/img/mobileFashions/04.png">
-                </div>
-                
-                
-                
+                </div>             
             </div>
         </div>
-    </div>
-    
+    </div>    
 </div>
 <!-- [ content ] End -->
+
+
+<script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $("form#data").submit(function(e) {
+        e.preventDefault();    
+        //var formData = new FormData(this);
+        var url = $(this).attr('action');
+        var method = "PUT";
+        //var data = $(this).serialize();
+        console.log(data);
+        var form = $('#data')[0];
+
+        // Create an FormData object
+        var data = new FormData(form);
+        $.ajax({
+            url:url,
+            type:method,
+            enctype: 'multipart/form-data',
+            processData: false,  // Important!
+            contentType: false,
+            cache: false,
+            data:data
+        }).done(function(data){
+           if(data !== '')
+            {
+               window.location.href='<?php echo base_url() ?>admin/dashboard';
+            }
+            else
+            {
+               window.location.href='<?php echo base_url() ?>admin/news';
+               throw new Error('go');
+            } 
+        });
+    });
+</script>
