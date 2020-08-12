@@ -27,10 +27,9 @@ class Crud_model extends CI_Model {
       $data['password'] = $password;
 
       $parameters = json_encode($data);
-      /*print_r($parameters);
-      die();*/
+      
 
-      $url = "http://18.191.31.131:8000/auth/login/";
+      $url = "http://3.16.150.40:8000/auth/login/";
       $ch = curl_init();
           curl_setopt($ch, CURLOPT_URL, $url);
           curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
@@ -42,6 +41,7 @@ class Crud_model extends CI_Model {
           curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
           curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
       $result = curl_exec($ch);
+      
 
       $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
       $headers = substr($result, 0, $header_size);
@@ -117,7 +117,7 @@ class Crud_model extends CI_Model {
     {
         $crsf = $this->session->userdata('cookie');
         $session = $this->session->userdata('cookie_2');
-        $url = "http://18.191.31.131:8000/api/news/";
+        $url = "http://3.16.150.40:8000/api/news/";
         $ch = curl_init();
           curl_setopt($ch, CURLOPT_URL, $url);
           curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', "Cookie: csrftoken= $crsf; sessionid=$session"));
@@ -135,7 +135,7 @@ class Crud_model extends CI_Model {
 
       $crsf = $this->session->userdata('cookie');
       $session = $this->session->userdata('cookie_2');
-      $url = "http://18.191.31.131:8000/api/news/?id=$id";
+      $url = "http://3.16.150.40:8000/api/news/?id=$id";
       $ch = curl_init();
           curl_setopt($ch, CURLOPT_URL, $url);
           curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', "Cookie: csrftoken= $crsf; sessionid=$session"));
@@ -153,7 +153,7 @@ class Crud_model extends CI_Model {
     function delete_news($id){
       $crsf = $this->session->userdata('cookie');
       $session = $this->session->userdata('cookie_2');
-      $url = "http://18.191.31.131:8000/api/news/?id=$id";
+      $url = "http://3.16.150.40:8000/api/news/?id=$id";
       $ch = curl_init();
           curl_setopt($ch, CURLOPT_URL, $url);
           curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', "Cookie: csrftoken= $crsf; sessionid=$session"));
@@ -174,7 +174,7 @@ class Crud_model extends CI_Model {
 
       $crsf = $this->session->userdata('cookie');
       $session = $this->session->userdata('cookie_2');
-      $url = "http://18.191.31.131:8000/api/homepage_quotes/?id=$id";
+      $url = "http://3.16.150.40:8000/api/homepage_quotes/?id=$id";
       $ch = curl_init();
           curl_setopt($ch, CURLOPT_URL, $url);
           curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', "Cookie: csrftoken= $crsf; sessionid=$session"));
@@ -193,7 +193,7 @@ class Crud_model extends CI_Model {
     function get_offers(){
       $crsf = $this->session->userdata('cookie');
       $session = $this->session->userdata('cookie_2');
-      $url = "http://18.191.31.131:8000/api/codes/";
+      $url = "http://3.16.150.40:8000/api/codes/";
       $ch = curl_init();
           curl_setopt($ch, CURLOPT_URL, $url);
           curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', "Cookie: csrftoken= $crsf; sessionid=$session"));
@@ -209,7 +209,7 @@ class Crud_model extends CI_Model {
     function get_offers_id($id){
       $crsf = $this->session->userdata('cookie');
       $session = $this->session->userdata('cookie_2');
-      $url = "http://18.191.31.131:8000/api/codes/?id=$id";
+      $url = "http://3.16.150.40:8000/api/codes/?id=$id";
       $ch = curl_init();
           curl_setopt($ch, CURLOPT_URL, $url);
           curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', "Cookie: csrftoken= $crsf; sessionid=$session"));
@@ -226,7 +226,7 @@ class Crud_model extends CI_Model {
     function delete_offers($id){
       $crsf = $this->session->userdata('cookie');
       $session = $this->session->userdata('cookie_2');
-      $url = "http://18.191.31.131:8000/api/codes/?id=$id";
+      $url = "http://3.16.150.40:8000/api/codes/?id=$id";
       $ch = curl_init();
           curl_setopt($ch, CURLOPT_URL, $url);
           curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', "Cookie: csrftoken= $crsf; sessionid=$session"));
@@ -244,7 +244,7 @@ class Crud_model extends CI_Model {
     function get_homepage_video($id){
       $crsf = $this->session->userdata('cookie');
       $session = $this->session->userdata('cookie_2');
-      $url = "http://18.191.31.131:8000/api/home_video/?id=$id";
+      $url = "http://3.16.150.40:8000/api/home_video/?id=$id";
       $ch = curl_init();
           curl_setopt($ch, CURLOPT_URL, $url);
           curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', "Cookie: csrftoken= $crsf; sessionid=$session"));
@@ -264,7 +264,7 @@ class Crud_model extends CI_Model {
     {
       $crsf = $this->session->userdata('cookie');
       $session = $this->session->userdata('cookie_2');
-      $url = "http://18.191.31.131:8000/api/video_collections/";
+      $url = "http://3.16.150.40:8000/api/video_collections/";
       $ch = curl_init();
           curl_setopt($ch, CURLOPT_URL, $url);
           curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', "Cookie: csrftoken= $crsf; sessionid=$session"));
@@ -283,7 +283,7 @@ class Crud_model extends CI_Model {
     {
       $crsf = $this->session->userdata('cookie');
       $session = $this->session->userdata('cookie_2');
-      $url = "http://18.191.31.131:8000/api/videos/";
+      $url = "http://3.16.150.40:8000/api/videos/";
       $ch = curl_init();
           curl_setopt($ch, CURLOPT_URL, $url);
           curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', "Cookie: csrftoken= $crsf; sessionid=$session"));
@@ -301,7 +301,7 @@ class Crud_model extends CI_Model {
     {
       $crsf = $this->session->userdata('cookie');
       $session = $this->session->userdata('cookie_2');
-      $url = "http://18.191.31.131:8000/api/videos/?collection=$collection";
+      $url = "http://3.16.150.40:8000/api/videos/?collection=$collection";
       $ch = curl_init();
           curl_setopt($ch, CURLOPT_URL, $url);
           curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', "Cookie: csrftoken= $crsf; sessionid=$session"));
@@ -319,7 +319,7 @@ class Crud_model extends CI_Model {
     {
       $crsf = $this->session->userdata('cookie');
       $session = $this->session->userdata('cookie_2');
-      $url = "http://18.191.31.131:8000/api/videos/?id=$id";
+      $url = "http://3.16.150.40:8000/api/videos/?id=$id";
       $ch = curl_init();
           curl_setopt($ch, CURLOPT_URL, $url);
           curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', "Cookie: csrftoken= $crsf; sessionid=$session"));
@@ -335,7 +335,7 @@ class Crud_model extends CI_Model {
     function delete_video($id){
       $crsf = $this->session->userdata('cookie');
       $session = $this->session->userdata('cookie_2');
-      $url = "http://18.191.31.131:8000/api/videos/?id=$id";
+      $url = "http://3.16.150.40:8000/api/videos/?id=$id";
       $ch = curl_init();
           curl_setopt($ch, CURLOPT_URL, $url);
           curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', "Cookie: csrftoken= $crsf; sessionid=$session"));
@@ -351,7 +351,7 @@ class Crud_model extends CI_Model {
     function delete_videoCollection($id){
       $crsf = $this->session->userdata('cookie');
       $session = $this->session->userdata('cookie_2');
-      $url = "http://18.191.31.131:8000/api/video_collections/?id=$id";
+      $url = "http://3.16.150.40:8000/api/video_collections/?id=$id";
       $ch = curl_init();
           curl_setopt($ch, CURLOPT_URL, $url);
           curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', "Cookie: csrftoken= $crsf; sessionid=$session"));
@@ -363,7 +363,83 @@ class Crud_model extends CI_Model {
       $result = curl_exec($ch);
       $response = json_decode($result);     
       return $response;
-    }  
+    } 
+
+
+
+
+
+
+    function suggestion_api(){
+      $crsf = $this->session->userdata('cookie');
+      $session = $this->session->userdata('cookie_2');
+      $url = "http://3.16.150.40:8000/api/suggestions/";
+      $ch = curl_init();
+          curl_setopt($ch, CURLOPT_URL, $url);
+          curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', "Cookie: csrftoken= $crsf; sessionid=$session"));
+          curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+          curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET" );
+          curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+          curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+          curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+      $result = curl_exec($ch);
+      $response = json_decode($result);    
+      return $response;
+    } 
+
+    function customer_news_api(){
+      $crsf = $this->session->userdata('cookie');
+      $session = $this->session->userdata('cookie_2');
+      $url = "http://3.16.150.40:8000/api/cus_post/";
+      $ch = curl_init();
+          curl_setopt($ch, CURLOPT_URL, $url);
+          curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', "Cookie: csrftoken= $crsf; sessionid=$session"));
+          curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+          curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET" );
+          curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+          curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+          curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+      $result = curl_exec($ch);
+      $response = json_decode($result);    
+      return $response;
+    }
+    
+    function customer_api(){
+      $crsf = $this->session->userdata('cookie');
+      $session = $this->session->userdata('cookie_2');
+      $url = "http://3.16.150.40:8000/api/data/";
+      $ch = curl_init();
+          curl_setopt($ch, CURLOPT_URL, $url);
+          curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', "Cookie: csrftoken= $crsf; sessionid=$session"));
+          curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+          curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET" );
+          curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+          curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+          curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+      $result = curl_exec($ch);
+      $response = json_decode($result);    
+      return $response;
+    }
+
+    function get_collection_api(){
+      /* $crsf = $this->session->userdata('cookie');
+      $session = $this->session->userdata('cookie_2'); */
+      $url = "https://3b115ce69f83baf0738716c5f58ca7e1:b1304ebe3399eaac1f5171439e0f8111@deddimaag.myshopify.com/admin/api/2020-07/collection_listings.json";
+      $ch = curl_init();
+          curl_setopt($ch, CURLOPT_URL, $url);
+          curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+          curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+          curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET" );
+          curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+          curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+          curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+      $result = curl_exec($ch);
+      $response = json_decode($result, true); 
+      /* $k=json_decode($result, true); */
+      /* print_r($response["collection_listings"]); */
+      return $response["collection_listings"];
+
+    } 
 
     
 

@@ -73,16 +73,16 @@
 
 
         <li class="sidenav-item">
-            <a href="tables_bootstrap.html" class="sidenav-link hover-link">
+            <a href="<?php echo base_url();?>admin/suggestion" class="sidenav-link hover-link">
                 <i class="sidenav-icon feather icon-settings"></i>
                 <div>Suggestion Box</div>
             </a>
         </li>
 
         <li class="sidenav-item">
-            <a href="tables_bootstrap.html" class="sidenav-link hover-link">
+            <a href="<?php echo base_url();?>admin/collections" class="sidenav-link hover-link">
                 <i class="sidenav-icon feather icon-settings"></i>
-                <div>Customer Support</div>
+                <div>Collections</div>
             </a>
         </li>
 
@@ -108,7 +108,7 @@
         </li>
 
         <li class="sidenav-item">
-            <a href="tables_bootstrap.html" class="sidenav-link hover-link">
+            <a href="<?php echo base_url();?>admin/customer" class="sidenav-link hover-link">
                 <i class="sidenav-icon feather icon-settings"></i>
                 <div>Customer Data</div>
             </a>

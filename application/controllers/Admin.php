@@ -138,6 +138,35 @@ class Admin extends CI_Controller {
         $this->load->view('backend/index', $page_data);   
     }
 
+    function suggestion($param1 = "", $param2 = "")
+    {   
+        /*if ($this->session->userdata('user_login') != 1)
+            redirect(base_url('admin/dashboard'), 'refresh');*/
+        $page_data['suggestion'] = $this->crud_model->suggestion_api();
+        $page_data['page_name']  = 'suggestion_page';
+        $page_data['page_title'] = 'Admin dashboard';
+        $this->load->view('backend/index', $page_data); 
+    }
+
+    function customer($param1 = "", $param2 = "")
+    {   
+        
+        $page_data['customer'] = $this->crud_model->customer_api();
+        $page_data['page_name']  = 'customer_data';
+        $page_data['page_title'] = 'Admin dashboard';
+        $this->load->view('backend/index', $page_data); 
+    }
+
+    function collections($param1 = "", $param2 = "")
+    {   
+        
+        $page_data['collection'] = $this->crud_model->get_collection_api();
+        $page_data['page_name']  = 'collection_data';
+        $page_data['page_title'] = 'Admin dashboard';
+        $this->load->view('backend/index', $page_data); 
+    }
+
+
 
 
     

@@ -84,11 +84,6 @@
                                                             <i class="fas fa-sort ml-1"></i>
                                                             </a>
                                                         </th>
-                                                        <!-- <th class="th-lg" style="width:200px !important;">
-                                                            <a href="">Author
-                                                            <i class="fas fa-sort ml-1"></i>
-                                                            </a>
-                                                        </th> -->
                                                         <th class="th-lg">
                                                             <a href="">Date
                                                                 <i class="fas fa-sort ml-1"></i>
@@ -110,7 +105,7 @@
                                                                                                           
                                                         <td><img src="http://18.191.31.131:8000/api<?php echo $key->Image;?>" class="mr-2" style="width: 40px; height: 40px;"><span><a href="#" class="mr-2" style="color:#147ee1"><?php echo $key->Title;?></a></span></td>
                                                         <td>News</td>
-                                                        <!-- <td><?php echo $key->ContributedBy;?></td> -->
+            
                                                         <td><?php echo $key->PostedDate;?></td>
                                                         <td>
                                                             <button class="btn btn-outline-primary m-1" type="button"><a onclick="showAjaxModal('<?php echo base_url('modal/popup/model_edit_news/'.$key->id);?>')">Edit</a></button>
@@ -246,11 +241,7 @@
                                                 <!--Table head-->
                                                 <thead>
                                                     <tr>
-                                                    <th>
-                                                        <input class="form-check-input" type="checkbox" id="checkbox">
-                                                        <label class="form-check-label" for="checkbox" class="mr-2 label-table"></label>
-                                                    </th>
-                                                    
+                                                                                                        
                                                     <th class="th-lg" style="width:200px !important;">
                                                         <a href="">Title
                                                         <i class="fas fa-sort ml-1"></i>
@@ -271,6 +262,11 @@
                                                         <i class="fas fa-sort ml-1"></i>
                                                         </a>
                                                     </th>
+                                                    <th class="th-lg">
+                                                        <a href="">Action
+                                                            <i class="fas fa-sort ml-1"></i>
+                                                        </a>
+                                                    </th>
                                                     
                                                     </tr>
                                                 </thead>
@@ -278,66 +274,22 @@
                                         
                                                 <!--Table body-->
                                                 <tbody>
+                                                    <?php $cus_news =$this->crud_model->customer_news_api();
+
+                                                    foreach ($cus_news as $key ):?>
                                                     <tr>
-                                                    <th scope="row">
-                                                        <input class="form-check-input" type="checkbox" id="checkbox1">
-                                                        <label class="form-check-label" for="checkbox1" class="label-table"></label>
-                                                    </th>
-                                                    
-                                                    <td><img src="<?php echo base_url();?>assets/img/mobileFashions/product1.png" class="mr-2"><span><a href="#" class="mr-2" style="color:#147ee1">environment</a></span><span class="badge badge-default"> hidden</span></td>
-                                                    <td>News</td>
-                                                    <td>Word fashions</td>
-                                                    <td>02-03-2020</td>
-                                                    
+                                                                                                          
+                                                        <td><img src="http://18.191.31.131:8000/api<?php echo $key->Image;?>" class="mr-2" style="width: 40px; height: 40px;"><span><a href="#" class="mr-2" style="color:#147ee1"><?php echo $key->ArticleTitle;?></a></span></td>
+                                                        <td>News</td>
+                                                        <th><?php echo $key->CustomerName;?></th>
+            
+                                                        <td><?php echo $key->CustomerPostedDate;?></td>
+                                                        <td>
+                                                            <button class="btn btn-outline-primary m-1" type="button"><a onclick="showAjaxModal('<?php echo base_url('modal/popup/model_edit_news/'.$key->id);?>')">View</a></button>
+                                                            
+                                                        </td>                       
                                                     </tr>
-                                                    <tr>
-                                                    <th scope="row">
-                                                        <input class="form-check-input" type="checkbox" id="checkbox2">
-                                                        <label class="form-check-label" for="checkbox2" class="label-table"></label>
-                                                    </th>
-                                                    
-                                                    <td><img src="<?php echo base_url();?>assets/img/mobileFashions/product1.png" class="mr-2"><span><a href="#" class="mr-2" style="color:#147ee1">environment</a></span><span class="badge badge-default"> hidden</span></td>
-                                                    <td>News</td>
-                                                    <td>Venky brands</td>
-                                                    <td>02-03-2020</td>
-                                                    
-                                                    </tr>
-                                                    <tr>
-                                                    <th scope="row">
-                                                        <input class="form-check-input" type="checkbox" id="checkbox3">
-                                                        <label class="form-check-label" for="checkbox3" class="label-table"></label>
-                                                    </th>
-                                                    
-                                                    <td><img src="<?php echo base_url();?>assets/img/mobileFashions/product1.png" class="mr-2"><span><a href="#" class="mr-2" style="color:#147ee1">environment</a></span><span class="badge badge-default"> hidden</span></td>
-                                                    <td>News</td>
-                                                    <td>Manasa flowers</td>
-                                                    <td>03-03-2020</td>
-                                                    
-                                                    </tr>
-                                                    <tr>
-                                                    <th scope="row">
-                                                        <input class="form-check-input" type="checkbox" id="checkbox4">
-                                                        <label class="form-check-label" for="checkbox4" class="label-table"></label>
-                                                    </th>
-                                                    
-                                                    <td><img src="<?php echo base_url();?>assets/img/mobileFashions/product1.png" class="mr-2"><span><a href="#" class="mr-2" style="color:#147ee1">environment</a></span><span class="badge badge-default"> hidden</span></td>
-                                                    <td>News</td>
-                                                    <td>Priay Brands</td>
-                                                    <td>05-03-2020</td>
-                                                    
-                                                    </tr>
-                                                    <tr>
-                                                    <th scope="row">
-                                                        <input class="form-check-input" type="checkbox" id="checkbox5">
-                                                        <label class="form-check-label" for="checkbox5" class="label-table"></label>
-                                                    </th>
-                                                    
-                                                    <td><img src="<?php echo base_url();?>assets/img/mobileFashions/product1.png" class="mr-2"><span><a href="#" class="mr-2" style="color:#147ee1">environment</a></span><span class="badge badge-default"> hidden</span></td>
-                                                    <td>News</td>
-                                                    <td>Nandaka Impressions</td>
-                                                    <td>07-03-2020</td>
-                                                    
-                                                    </tr>
+                                                    <?php endforeach;?>
                                                 </tbody>
                                                 <!--Table body-->
                                                 </table>

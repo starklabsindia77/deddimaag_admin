@@ -40,6 +40,8 @@ class Auth extends CI_Controller {
     {
       
           $response = $this->crud_model->login();
+          /* print($response);
+          die(); */
           
           if ($response->user_status == true) {
             $this->session->set_userdata('user_login', '1');
