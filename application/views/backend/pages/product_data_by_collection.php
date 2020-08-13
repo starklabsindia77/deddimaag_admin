@@ -1,6 +1,6 @@
 <!-- [ content ] Start -->
 <div class="container-fluid flex-grow-1 container-p-y">
-    <h4 class="font-weight-bold py-3 mb-0">Collection Info</h4>
+    <h4 class="font-weight-bold py-3 mb-0">Product Info</h4>
     <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a></li>
@@ -15,7 +15,7 @@
                 <div class="col-md-12">
                     <div class="card mb-4">
                         <div class="card-header bg-002B6 text-white p-3">
-                            <h6 class="card-title mb-1 font-weight-bold">Collection</h6>
+                            <h6 class="card-title mb-1 font-weight-bold">Product</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -36,7 +36,7 @@
                                             <tr>
                                                                                                      
                                                 <th class="th-lg" style="width:200px !important;">
-                                                    <a href="">Collection Id
+                                                    <a href="">Product Id
                                                     <i class="fas fa-sort ml-1"></i>
                                                     </a>
                                                 </th>
@@ -46,7 +46,7 @@
                                                     </a>
                                                 </th>                                               
                                                 <th class="th-lg">
-                                                    <a href="">Sort Order
+                                                    <a href="">Product Type
                                                         <i class="fas fa-sort ml-1"></i>
                                                     </a>
                                                 </th>
@@ -62,11 +62,11 @@
                                 
                                         <!--Table body-->
                                         <tbody>
-                                            <?php foreach ($collection as $key):?>
+                                            <?php foreach ($product as $key):?>
                                             <tr>
-                                                <td><a href = "<?php echo base_url();?>admin/ProductCollections/<?php echo $key['collection_id'];?>"><strong><?php echo $key['collection_id'];?></strong></a></td>
+                                                <td><?php echo $key['id'];?></td>
                                                 <td><?php echo $key['title'];?></td> 
-                                                <td><?php echo $key['sort_order'];?></td>                                  
+                                                <td><?php echo $key['product_type'];?></td>                                  
                                                 <td><?php echo $key['updated_at'];?></td>
                                             </tr>
                                             <?php endforeach;?>

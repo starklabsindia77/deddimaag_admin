@@ -43,7 +43,7 @@
 <script type="text/javascript">
     $("form#data").submit(function(e) {
         e.preventDefault();    
-        var url = "http://18.191.31.131:8000/api/videos/?id=<?php echo $video->id;?>";
+        var url = "http://3.16.150.40:8000/api/videos/?id=<?php echo $video->id;?>";
         var method = $(this).attr('method');
         var form = $('#data')[0];
         // Create an FormData object

@@ -127,7 +127,7 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                    <form action="http://18.191.31.131:8000/api/news/" id="data" method="POST" enctype="multipart/form-data">
+                                    <form action="http://3.16.150.40:8000/api/news/" id="data" method="POST" enctype="multipart/form-data">
                                         <div class="row">
                                             <div class="col-md-12 form-group mb-3">
                                                 <label for="Heading">Heading</label>

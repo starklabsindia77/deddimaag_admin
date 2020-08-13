@@ -52,7 +52,7 @@
     $("form#data").submit(function(e) {
         e.preventDefault();    
         //var formData = new FormData(this);
-        var url = "http://18.191.31.131:8000/api/news/?id=<?php echo $info[0]->id;?>";
+        var url = "http://3.16.150.40:8000/api/news/?id=<?php echo $info[0]->id;?>";
         var method = $(this).attr('method');
         //var data = $(this).serialize();
         console.log(data);

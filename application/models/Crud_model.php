@@ -12,12 +12,8 @@ class Crud_model extends CI_Model {
     function clear_cache() {
         $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0');
         $this->output->set_header('Pragma: no-cache');
-    }
-
-
-    
-   // auth model  Start//
-
+    }    
+    // auth model  Start//
 
     function login(){
       $email = $this->input->post('emailORphnno');
@@ -77,11 +73,9 @@ class Crud_model extends CI_Model {
 
     /*function create_news()
     {
-        $ch = curl_init();
-          
+        $ch = curl_init();         
 
-          $imageData = file_get_contents($_FILES['Image']['name']);
-         
+          $imageData = file_get_contents($_FILES['Image']['name']);         
           $data['Image'] = base64_encode($imageData);
           $data['Title'] = html_escape($this->input->post('Title'));
           $data['SubTitle'] = html_escape($this->input->post('SubTitle'));
@@ -332,6 +326,7 @@ class Crud_model extends CI_Model {
       $response = json_decode($result);    
       return $response;
     }
+
     function delete_video($id){
       $crsf = $this->session->userdata('cookie');
       $session = $this->session->userdata('cookie_2');
@@ -347,7 +342,8 @@ class Crud_model extends CI_Model {
       $result = curl_exec($ch);
       $response = json_decode($result);     
       return $response;
-    }  
+    }
+
     function delete_videoCollection($id){
       $crsf = $this->session->userdata('cookie');
       $session = $this->session->userdata('cookie_2');
@@ -364,11 +360,6 @@ class Crud_model extends CI_Model {
       $response = json_decode($result);     
       return $response;
     } 
-
-
-
-
-
 
     function suggestion_api(){
       $crsf = $this->session->userdata('cookie');
@@ -422,8 +413,6 @@ class Crud_model extends CI_Model {
     }
 
     function get_collection_api(){
-      /* $crsf = $this->session->userdata('cookie');
-      $session = $this->session->userdata('cookie_2'); */
       $url = "https://3b115ce69f83baf0738716c5f58ca7e1:b1304ebe3399eaac1f5171439e0f8111@deddimaag.myshopify.com/admin/api/2020-07/collection_listings.json";
       $ch = curl_init();
           curl_setopt($ch, CURLOPT_URL, $url);
@@ -435,13 +424,22 @@ class Crud_model extends CI_Model {
           curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
       $result = curl_exec($ch);
       $response = json_decode($result, true); 
-      /* $k=json_decode($result, true); */
-      /* print_r($response["collection_listings"]); */
       return $response["collection_listings"];
 
-    } 
-
+    }
     
-
-    
+    function get_product_collection_api($collection_id = ""){
+      $url = "https://3b115ce69f83baf0738716c5f58ca7e1:b1304ebe3399eaac1f5171439e0f8111@deddimaag.myshopify.com/admin/api/2020-07/collections/$collection_id/products.json";
+      $ch = curl_init();
+          curl_setopt($ch, CURLOPT_URL, $url);
+          curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+          curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+          curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET" );
+          curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+          curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+          curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+      $result = curl_exec($ch);
+      $response = json_decode($result, true);
+      return $response["products"];
+    }  
 }

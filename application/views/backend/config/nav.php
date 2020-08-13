@@ -59,8 +59,21 @@
 
         <li class="sidenav-item">
             <a href="<?php echo base_url();?>admin/ecommerce_frontend" class="sidenav-link hover-link">
-                <i class="sidenav-icon feather icon-settings"></i>
+                <i class="sidenav-icon feather icon-disc"></i>
                 <div>E-Commerce Front</div>
+            </a>
+        </li>
+        <li class="sidenav-item">
+            <a href="<?php echo base_url();?>admin/category" class="sidenav-link hover-link">
+                <i class="sidenav-icon feather icon-command"></i>
+                <div>Category</div>
+            </a>
+        </li>
+
+        <li class="sidenav-item">
+            <a href="<?php echo base_url();?>admin/collections" class="sidenav-link hover-link">
+                <i class="sidenav-icon feather icon-compass"></i>
+                <div>Collections</div>
             </a>
         </li>
 
@@ -78,13 +91,7 @@
                 <div>Suggestion Box</div>
             </a>
         </li>
-
-        <li class="sidenav-item">
-            <a href="<?php echo base_url();?>admin/collections" class="sidenav-link hover-link">
-                <i class="sidenav-icon feather icon-settings"></i>
-                <div>Collections</div>
-            </a>
-        </li>
+        
 
         <li class="sidenav-item">
             <a href="tables_bootstrap.html" class="sidenav-link hover-link">

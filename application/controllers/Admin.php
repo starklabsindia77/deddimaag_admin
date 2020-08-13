@@ -166,6 +166,21 @@ class Admin extends CI_Controller {
         $this->load->view('backend/index', $page_data); 
     }
 
+    function ProductCollections($param1 = "", $param2 = "")
+    {   
+        $page_data['product'] = $this->crud_model->get_product_collection_api($param1);
+        $page_data['page_name']  = 'product_data_by_collection';
+        $page_data['page_title'] = 'Admin dashboard';
+        $this->load->view('backend/index', $page_data); 
+    }
+
+    function Category($param1 = "", $param2 = "")
+    {   
+        $page_data['page_name']  = 'category_data';
+        $page_data['page_title'] = 'Admin dashboard';
+        $this->load->view('backend/index', $page_data); 
+    }
+
 
 
 

@@ -1,23 +1,12 @@
-<?php $info = $this->crud_model->get_offers_id($param2);
-  $offer = $info[0];
-?> 
-
-
-<form id="data" method="PUT" enctype="multipart/form-data">   
+<form id="data" method="POST" enctype="multipart/form-data">   
     <div class="row">
-        <div class="col-md-6 form-group mb-3">
+        <div class="col-md-12 form-group mb-3">
             <label for="Heading">Title</label>
-            <input class="form-control" id="Heading" name="Title" type="text" value="<?php echo $offer->Title;?>" />
-        </div>
-        <div class="col-md-6 form-group mb-3">
-            <label for="Heading_2">Coupon</label>
-            <input class="form-control" id="Heading_2" name="Coupon" type="text" value="<?php echo $offer->Coupon;?>" />
+            <input class="form-control" id="Heading" name="Title" type="text" />
         </div>
         <div class="col-md-12 form-group mb-3">
-            <div class="upload-btn-wrapper">
-                <button class="btn">Upload a Media</button>
-                <input type="file" class="" name="Image" id="Image" />
-            </div>
+            <label for="discription">Description</label>
+            <textarea class="form-control" id="discription" name="discription" type="text" rows="4" cols="50"></textarea>
         </div>                                 
         <div class="col-md-12 form-group mb-3">
             <div class="float-sm-right text-zero">
@@ -30,12 +19,11 @@
 <script type="text/javascript">
     $("form#data").submit(function(e) {
         e.preventDefault();    
-        var url = "http://3.16.150.40:8000/api/codes/?id=<?php echo $offer->id;?>";
+        var url = "http://18.191.31.131:8000/api/codes/";
         var method = $(this).attr('method');
         var form = $('#data')[0];
         // Create an FormData object
         var data = new FormData(form);
-        
         $.ajax({
             url:url,
             type:method,
