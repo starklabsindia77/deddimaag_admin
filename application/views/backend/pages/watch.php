@@ -64,7 +64,7 @@
                                             <div class="card-body">
                                                 <div class="row">
                                                     <div class="col-md-3">
-                                                        <img src="http://18.191.31.131:8000/api<?php echo $key->Image;?>" style="border: 2px dotted #b6b0b0; height: 250px; width: 250px;">
+                                                        <img src="http://3.16.150.40:8000/api<?php echo $key->Image;?>" style="border: 2px dotted #b6b0b0; height: 250px; width: 250px;">
                                                     </div>
                                                     <div class="col-md-9 ">
                                                         <div class="row ">                                                
@@ -106,7 +106,7 @@
                                             <div class="card-body">
                                                 <div class="row">
                                                     <div class="col-md-3">
-                                                        <img src="http://18.191.31.131:8000/api<?php echo $key->Image;?>" style="border: 2px dotted #b6b0b0; height: 250px; width: 250px;">
+                                                        <img src="http://3.16.150.40:8000/api<?php echo $key->Image;?>" style="border: 2px dotted #b6b0b0; height: 250px; width: 250px;">
                                                     </div>
                                                     <div class="col-md-9 ">
                                                         <div class="row ">                                                
@@ -148,7 +148,7 @@
                                             <div class="card-body">
                                                 <div class="row">
                                                     <div class="col-md-3">
-                                                        <img src="http://18.191.31.131:8000/api<?php echo $key->Image;?>" style="border: 2px dotted #b6b0b0; height: 250px; width: 250px;">
+                                                        <img src="http://3.16.150.40:8000/api<?php echo $key->Image;?>" style="border: 2px dotted #b6b0b0; height: 250px; width: 250px;">
                                                     </div>
                                                     <div class="col-md-9 ">
                                                         <div class="row ">                                                

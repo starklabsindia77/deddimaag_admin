@@ -20,7 +20,7 @@
                             <h6 class="card-title mb-1 font-weight-bold">Quotes</h6>
                         </div>
                         <div class="card-body">
-                            <form action="http://18.191.31.131:8000/api/homepage_quotes/?id=1" id="data" method="POST" enctype="multipart/form-data">
+                            <form action="http://3.16.150.40:8000/api/homepage_quotes/?id=1" id="data" method="POST" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-md-6 form-group mb-3">
                                         <label for="Heading">Quote One</label>
